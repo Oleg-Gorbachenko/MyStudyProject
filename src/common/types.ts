@@ -6,12 +6,13 @@ export type SetValueViewType = (value: ViewType) => void;
 export type StateType = {
   viewValue: ViewType;
   setViewValue: SetValueViewType;
+  setIsAuthValue: () => void;
+  isAuth: boolean;
 };
 
 export type RootStackParamList = {
-  Home: undefined;
   Profile: undefined;
-  Auth: undefined;
+  Greeting: undefined;
 };
 
 type UseNavigationType = NavigationProp<RootStackParamList>;

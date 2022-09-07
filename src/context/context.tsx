@@ -8,10 +8,18 @@ type Props = {
 const initialState: StateType = {
   viewValue: 'tile',
   setViewValue: () => {},
+  isAuth: true,
+  setIsAuthValue: () => {},
 };
 
 const Component: React.FC<Props> = props => {
   const {children} = props;
+
+  const [isAuth, setIsAuth] = React.useState<boolean>(false);
+
+  const setIsAuthValue = React.useCallback(() => {
+    setIsAuth(!isAuth);
+  }, [isAuth, setIsAuth]);
 
   const [viewValue, setValue] = React.useState<ViewType>('tile');
 
@@ -22,6 +30,8 @@ const Component: React.FC<Props> = props => {
   return children({
     viewValue,
     setViewValue,
+    isAuth,
+    setIsAuthValue,
   });
 };
 
