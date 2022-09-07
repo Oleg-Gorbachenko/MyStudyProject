@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {WIDTH} from '../common/variables';
 
 type ButtonSubscribePropsType = {
   onPress: () => void;
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#408eef',
     paddingVertical: 6,
-    paddingHorizontal: 70,
+    paddingHorizontal: WIDTH / 6,
     borderRadius: 5,
   },
   text: {
