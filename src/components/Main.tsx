@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
 import {commonStyles} from '../common/styles/styles';
 
 type MainPropsType = {
@@ -13,14 +13,14 @@ export const Main = ({title, desc}: MainPropsType) => {
   return (
     <View style={[styles.container, commonStyles.container]}>
       <Text style={styles.title}>{title}</Text>
-      <View style={styles.wrapper}>
-        <Text numberOfLines={showDesc ? 0 : 2} style={styles.desc}>
-          {desc}
-        </Text>
-        <TouchableOpacity onPress={() => setShowDesc(!showDesc)}>
+      <TouchableWithoutFeedback onPress={() => setShowDesc(!showDesc)}>
+        <View style={styles.wrapper}>
+          <Text numberOfLines={showDesc ? 0 : 2} style={styles.desc}>
+            {desc}
+          </Text>
           <Text style={styles.btn}>{showDesc ? 'скрыть' : 'ещё'}</Text>
-        </TouchableOpacity>
-      </View>
+        </View>
+      </TouchableWithoutFeedback>
     </View>
   );
 };
