@@ -4,9 +4,9 @@ import {ProfileScreen} from '../../screens/Main/ProfileScreen';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {ShopScreen} from '../../screens/Main/ShopScreen';
 import {MapScreen} from '../../screens/Main/MapScreen';
-import ShopIcon from '../../common/icons/ShopIcon';
-import MapIcon from '../../common/icons/MapIcon';
-import ProfileIcon from '../../common/icons/ProfileIcon';
+import MapIcon from '../../common/icons/map.svg';
+import ProfileIcon from '../../common/icons/profile.svg';
+import ShopIcon from '../../common/icons/shop.svg';
 
 const MainTab = createBottomTabNavigator<MainTabNavType>();
 
@@ -19,7 +19,11 @@ export const MainNavigator = () => {
         options={{
           title: 'Магазин',
           tabBarIcon: ({focused}) => (
-            <ShopIcon color={focused ? '#408eef' : '#8e9194'} />
+            <ShopIcon
+              width={34}
+              height={34}
+              fill={focused ? '#408eef' : '#8e9194'}
+            />
           ),
         }}
         name="Shop"
@@ -29,7 +33,11 @@ export const MainNavigator = () => {
         options={{
           title: 'Карта',
           tabBarIcon: ({focused}) => (
-            <MapIcon color={focused ? '#408eef' : '#8e9194'} />
+            <MapIcon
+              width={30}
+              height={30}
+              fill={focused ? '#408eef' : '#8e9194'}
+            />
           ),
         }}
         name="Map"
@@ -39,7 +47,11 @@ export const MainNavigator = () => {
         options={{
           title: 'Профиль',
           tabBarIcon: ({focused}) => (
-            <ProfileIcon color={focused ? '#408eef' : '#8e9194'} />
+            <ProfileIcon
+              width={30}
+              height={30}
+              fill={focused ? '#408eef' : '#8e9194'}
+            />
           ),
         }}
         name="Profile"
