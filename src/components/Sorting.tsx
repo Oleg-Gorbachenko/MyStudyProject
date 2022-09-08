@@ -1,8 +1,8 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import SortSvg from '../common/svg/SortSvg';
-import ContactsSvg from '../common/svg/ContactsSvg';
-import ViewIcon from '../common/svg/ViewIcon';
+import SortSvg from '../common/icons/SortSvg';
+import ContactsSvg from '../common/icons/ContactsSvg';
+import ViewIcon from '../common/icons/ViewIcon';
 
 export const Sorting = () => {
   return (
