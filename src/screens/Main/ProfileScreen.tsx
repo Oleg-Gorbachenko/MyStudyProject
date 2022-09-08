@@ -1,8 +1,8 @@
 import React from 'react';
-import {Header} from '../components/Header';
-import {Main} from '../components/Main';
-import {Sorting} from '../components/Sorting';
-import {MyFlatList} from '../components/MyFlatList';
+import {Header} from '../../components/Header';
+import {Main} from '../../components/Main';
+import {Sorting} from '../../components/Sorting';
+import {MyFlatList} from '../../components/MyFlatList';
 import {StyleSheet, View} from 'react-native';
 
 export const ProfileScreen = () => {

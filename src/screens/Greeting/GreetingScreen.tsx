@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {ButtonCustom} from '../components/ButtonCustom';
-import {useContext} from '../context/context';
+import {ButtonCustom} from '../../components/ButtonCustom';
+import {useContext} from '../../context/context';
 
 export const GreetingScreen = () => {
   const {setIsAuthValue} = useContext();

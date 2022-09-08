@@ -1,4 +1,8 @@
-import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {
+  NavigationProp,
+  NavigatorScreenParams,
+  useNavigation,
+} from '@react-navigation/native';
 
 export type ViewType = 'tile' | 'column';
 export type SetValueViewType = (value: ViewType) => void;
@@ -11,8 +15,14 @@ export type StateType = {
 };
 
 export type RootStackParamList = {
-  Profile: undefined;
+  Main: NavigatorScreenParams<MainTabNavType>;
   Greeting: undefined;
+};
+
+export type MainTabNavType = {
+  Shop: undefined;
+  Map: undefined;
+  Profile: undefined;
 };
 
 type UseNavigationType = NavigationProp<RootStackParamList>;
